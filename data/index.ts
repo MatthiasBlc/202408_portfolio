@@ -104,6 +104,49 @@ export const projects = [
   },
 ];
 
+
+
+export const projects2 = [
+  {
+    category: "Artificial Intelligence",
+    title: "You can do more with AI.",
+    src: "/b5.svg",
+    content: "haha",
+  },
+  {
+    category: "Productivity",
+    title: "Enhance your productivity.",
+    src: "/b5.svg",
+    content: "haha",
+  },
+  {
+    category: "Product",
+    title: "Launching the new Apple Vision Pro.",
+    src: "/b5.svg",
+    content: "haha",
+  },
+
+  {
+    category: "Product",
+    title: "Maps for your iPhone 15 Pro Max.",
+    src: "/b5.svg",
+    content: "haha",
+  },
+  {
+    category: "iOS",
+    title: "Photography just got better.",
+    src: "/b5.svg",
+    content: "haha",
+  },
+  {
+    category: "Hiring",
+    title: "Hiring for a Staff Software Engineer",
+    src: "/b5.svg",
+    content: "haha",
+  },
+];
+
+
 export const testimonials = [
   {
     quote:
