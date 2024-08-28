@@ -25,7 +25,10 @@ type Card = {
   src: string;
   title: string;
   category: string;
-  content: React.ReactNode;
+  iconLists: Array<string>;
+  content?: string;
+  content2?: string;
+  content3?: string;
 };
 
 export const CarouselContext = createContext<{
@@ -219,19 +222,36 @@ export const Card = ({
               >
                 <IconX className="h-6 w-6 text-neutral-100 dark:text-neutral-900" />
               </button>
-              <motion.p
-                layoutId={layout ? `category-${card.title}` : undefined}
-                className="text-base font-medium text-black dark:text-white"
-              >
-                {card.category}
-              </motion.p>
+              <div className="flex justify-between">
+                <motion.p
+                  layoutId={layout ? `category-${card.title}` : undefined}
+                  className="text-base font-medium text-black dark:text-white"
+                >
+                  {card.category}
+                </motion.p>
+                <motion.div className="flex items-center">
+                  {card.iconLists.map((icon, index) => (
+                    <div
+                      key={index}
+                      className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
+                      style={{
+                        transform: `translateX(-${5 * index + 2}px)`,
+                      }}
+                    >
+                      <img src={icon} alt="icon5" className="p-2" />
+                    </div>
+                  ))}
+                </motion.div>
+              </div>
               <motion.p
                 layoutId={layout ? `title-${card.title}` : undefined}
                 className="text-2xl md:text-5xl font-semibold text-neutral-700 mt-4 dark:text-white"
               >
                 {card.title}
               </motion.p>
-              <div className="py-10">{card.content}</div>
+              <motion.p className="py-10">{card.content}</motion.p>
+              <motion.p className="py-10">{card.content2}</motion.p>
+              <motion.p className="py-10">{card.content3}</motion.p>
             </motion.div>
           </div>
         )}
@@ -239,7 +259,7 @@ export const Card = ({
       <motion.button
         layoutId={layout ? `card-${card.title}` : undefined}
         onClick={handleOpen}
-        className="rounded-3xl bg-gray-100 dark:bg-neutral-900 h-80 w-56 md:h-[40rem] md:w-96 overflow-hidden flex flex-col items-start justify-start relative z-10"
+        className="rounded-3xl bg-gray-100 dark:bg-neutral-900 h-80 w-56 md:h-[40rem] md:w-96 overflow-hidden flex flex-col items-start justify-between relative z-10"
       >
         <div className="absolute h-full top-0 inset-x-0 bg-gradient-to-b from-black/50 via-transparent to-transparent z-30 pointer-events-none" />
         <div className="relative z-40 p-8">
@@ -256,12 +276,31 @@ export const Card = ({
             {card.title}
           </motion.p>
         </div>
-        <BlurImage
-          src={card.src}
-          alt={card.title}
-          fill
-          className="object-cover absolute z-10 inset-0"
-        />
+        <div className="">
+          <BlurImage src={card.src} alt={card.title} fill />
+        </div>
+
+        <div className="relative z-80 p-8">
+          <motion.div
+            layoutId={layout ? `title-${card.title}` : undefined}
+            className="text-white text-sm md:text-base font-medium font-sans text-left"
+          >
+            <div className="flex items-center">
+              {card.iconLists.map((icon, index) => (
+                <div
+                  key={index}
+                  className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
+                  style={{
+                    transform: `translateX(-${5 * index + 2}px)`,
+                  }}
+                >
+                  <img src={icon} alt="icon5" className="p-2" />
+                </div>
+              ))}
+            </div>
+            {card.title}
+          </motion.div>
+        </div>
       </motion.button>
     </>
   );

@@ -1,7 +1,6 @@
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
-  { name: "Testimonials", link: "#testimonials" },
   { name: "Contact", link: "#contact" },
 ];
 
@@ -104,6 +103,15 @@ export const projects = [
   },
 ];
 
+export const info = [
+  {
+    category: "Artificial Intelligence",
+    title: "You can do more with AI.",
+    src: "/b5.svg",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    content: `We can dynamically change the HTML. We can even include HTML elements like `,
+  },];
+
 
 
 export const projects2 = [
@@ -111,38 +119,61 @@ export const projects2 = [
     category: "Artificial Intelligence",
     title: "You can do more with AI.",
     src: "/b5.svg",
-    content: "haha",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+    content: "desc",
+    content2: "link",
+    content3: "image",
   },
   {
     category: "Productivity",
     title: "Enhance your productivity.",
     src: "/b5.svg",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
     content: "haha",
+    content2: "bèèèèèèèèèèèèèèè",
+    content3: "image",
+
   },
   {
     category: "Product",
     title: "Launching the new Apple Vision Pro.",
     src: "/b5.svg",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
     content: "haha",
+    content2: "bèèèèèèèèèèèèèèè",
+    content3: "image",
+
   },
 
   {
     category: "Product",
     title: "Maps for your iPhone 15 Pro Max.",
     src: "/b5.svg",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
     content: "haha",
+    content2: "bèèèèèèèèèèèèèèè",
+    content3: "image",
+
   },
   {
     category: "iOS",
     title: "Photography just got better.",
     src: "/b5.svg",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
     content: "haha",
+    content2: "bèèèèèèèèèèèèèèè",
+    content3: "image",
+
   },
   {
     category: "Hiring",
     title: "Hiring for a Staff Software Engineer",
     src: "/b5.svg",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
     content: "haha",
+    content2: "bèèèèèèèèèèèèèèè",
+    content3: "image",
+
   },
 ];
 
