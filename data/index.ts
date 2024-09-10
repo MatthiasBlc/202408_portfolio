@@ -4,6 +4,9 @@ export const navItems = [
   { name: "Contact", link: "#contact" },
 ];
 
+export const listLogos = ["/logo_js.svg", "/logo_react.svg", "/logo_nextjs.svg", "/logo_Typescript.svg", "/logo_Ruby.svg", "/logo_Ruby_On_Rails.svg", "/logo_node.svg", "/logo_express.svg", "/logo_git.svg", "/logo_docker.svg", "/logo_Postgresql_elephant.svg", "/Logo_C_sharp.svg"];
+
+
 export const gridItems = [
   {
     id: 1,
@@ -11,9 +14,10 @@ export const gridItems = [
     description: "I constantly try to improve",
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
     imgClassName: "w-full h-full",
-    titleClassName: "justify-end",
+    titleClassName: "flex flex-col-reverse ",
     img: "/b1.svg",
     spareImg: "",
+    listLogos: ["/logo_js.svg", "/logo_react.svg", "/logo_nextjs.svg", "/logo_Typescript.svg", "/logo_Ruby.svg", "/logo_Ruby_On_Rails.svg", "/logo_node.svg", "/logo_express.svg", "/logo_git.svg", "/logo_docker.svg", "/logo_Postgresql_elephant.svg", "/Logo_C_sharp.svg"],
   },
   {
     id: 2,
@@ -21,9 +25,10 @@ export const gridItems = [
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
-    titleClassName: "justify-start",
+    titleClassName: "flex flex-col justify-start",
     img: "",
     spareImg: "",
+    listLogos: "",
   },
   {
     id: 3,
@@ -31,9 +36,10 @@ export const gridItems = [
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
-    titleClassName: "justify-center md:max-w-full max-w-60 text-center",
+    titleClassName: "flex flex-col justify-center md:max-w-full max-w-60 text-center",
     img: "",
     spareImg: "",
+    listLogos: "",
   },
 
 ];
