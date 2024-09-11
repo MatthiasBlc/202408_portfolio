@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
+import React, { useEffect } from "react";
 import MagicButton from "./ui/MagicButton";
 import { FaLocationArrow } from "react-icons/fa";
 import { socialMedia } from "@/data";
@@ -23,7 +23,8 @@ const Footer = () => {
           Reach out to me today and let&apos;s discuss how I can help you
           achieve your goals.
         </p>
-        <a href="mailto:mail@test.fr">
+        {/* Encode with http://www.katpatuka.org/pub/doc/anti-spam.html */}
+        <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#109;&#97;&#116;&#46;&#98;&#111;&#117;&#108;&#111;&#99;&#64;&#119;&#97;&#110;&#97;&#100;&#111;&#111;&#46;&#102;&#114;">
           <MagicButton
             title="Let's get in touch"
             icon={<FaLocationArrow />}
