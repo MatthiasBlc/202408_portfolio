@@ -120,7 +120,7 @@ export const BentoGridItem = ({
             {title}
           </div>
           {id === 1 && (
-            <div className=" grow grid grid-cols-4 justify-items-center ">
+            <div className=" grow grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center gap-2 md:gap-3 lg:gap-5 ">
               {/* up => grid position 
 absolute -right-3 lg:right-20 bottom-3 lg:top-20
 gap-x-20 
@@ -129,7 +129,11 @@ gap-x-20
               */}
               {listLogos?.map((logo, i) => (
                 <div key={i}>
-                  <img src={logo} alt={logo} className="" />
+                  <img
+                    src={logo}
+                    alt={logo}
+                    className="max-w-20 md:max-w-15  lg:max-w-20"
+                  />
                 </div>
               ))}
 

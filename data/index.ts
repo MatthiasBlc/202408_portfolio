@@ -15,7 +15,7 @@ export const gridItems = [
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
     imgClassName: "w-full h-full",
     titleClassName: "flex flex-col-reverse ",
-    img: "/b1.svg",
+    img: "",
     spareImg: "",
     listLogos: ["/logo_js.svg", "/logo_react.svg", "/logo_nextjs.svg", "/logo_Typescript.svg", "/logo_Ruby.svg", "/logo_Ruby_On_Rails.svg", "/logo_node.svg", "/logo_express.svg", "/logo_git.svg", "/logo_docker.svg", "/logo_Postgresql_elephant.svg", "/Logo_C_sharp.svg"],
   },
