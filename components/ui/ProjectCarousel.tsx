@@ -25,11 +25,13 @@ interface CarouselProps {
 type Card = {
   src: string;
   title: string;
+  subtitle: string;
   category: string;
   iconLists: Array<string>;
   content?: string;
-  content2?: string;
-  content3?: string;
+  extLink?: string;
+  extLinkText?: string;
+  image?: string;
 };
 
 export const CarouselContext = createContext<{
@@ -225,17 +227,14 @@ export const Card = ({
                 <IconX className="h-6 w-6 text-neutral-100 dark:text-neutral-900" />
               </button>
               <div className="flex justify-between">
-                <motion.p
-                  layoutId={layout ? `category-${card.title}` : undefined}
-                  className="text-base font-medium text-black dark:text-white"
-                >
+                <motion.p className="text-base font-medium text-black dark:text-white">
                   {card.category}
                 </motion.p>
                 <motion.div className="flex items-center">
                   {card.iconLists.map((icon, index) => (
                     <div
                       key={index}
-                      className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
+                      className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center mx-1"
                       style={{
                         transform: `translateX(-${5 * index + 2}px)`,
                       }}
@@ -245,15 +244,21 @@ export const Card = ({
                   ))}
                 </motion.div>
               </div>
-              <motion.p
-                layoutId={layout ? `title-${card.title}` : undefined}
-                className="text-2xl md:text-5xl font-semibold text-neutral-700 mt-4 dark:text-white"
-              >
+              <motion.p className="text-2xl md:text-5xl font-semibold text-neutral-700 mt-4 dark:text-white">
                 {card.title}
               </motion.p>
               <motion.p className="py-10">{card.content}</motion.p>
-              <motion.p className="py-10">{card.content2}</motion.p>
-              <motion.p className="py-10">{card.content3}</motion.p>
+              <motion.a href={card.extLink} target="_blank" className="py-10">
+                {card.extLinkText}
+              </motion.a>
+              {/* KEEP THIS ONE  md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain */}
+              <motion.img
+                src={card.image}
+                alt={card.image}
+                className="py-10 md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain"
+                height={500}
+                width={500}
+              ></motion.img>
             </motion.div>
           </div>
         )}
@@ -261,14 +266,12 @@ export const Card = ({
       <motion.button
         layoutId={layout ? `card-${card.title}` : undefined}
         onClick={handleOpen}
-        className="rounded-3xl bg-gray-100 dark:bg-neutral-900 h-80 w-56 md:h-[40rem] md:w-96 overflow-hidden flex flex-col items-start justify-between relative z-10"
+        className="rounded-3xl bg-gray-100 dark:bg-neutral-900 h-[28rem] w-56 md:h-[40rem] md:w-96 overflow-hidden flex flex-col items-start justify-between relative z-10"
       >
+        {/* change here for the size Heights of cards */}
         <div className="absolute h-full top-0 inset-x-0 bg-gradient-to-b from-black/50 via-transparent to-transparent z-30 pointer-events-none" />
         <div className="relative z-40 p-8">
-          <motion.p
-            layoutId={layout ? `category-${card.category}` : undefined}
-            className="text-white text-sm md:text-base font-medium font-sans text-left"
-          >
+          <motion.p className="text-white text-sm md:text-base font-medium font-sans text-left">
             {card.category}
           </motion.p>
           <motion.p
@@ -279,19 +282,16 @@ export const Card = ({
           </motion.p>
         </div>
         <div className="">
-          <BlurImage src={card.src} alt={card.title} fill />
+          <BlurImage src={card.src} alt={card.title} width={500} height={500} />
         </div>
 
         <div className="relative z-80 p-8">
-          <motion.div
-            layoutId={layout ? `title-${card.title}` : undefined}
-            className="text-white text-sm md:text-base font-medium font-sans text-left"
-          >
-            <div className="flex items-center">
+          <motion.div className="text-white text-sm md:text-base font-medium font-sans text-left">
+            <div className="flex items-center mb-5">
               {card.iconLists.map((icon, index) => (
                 <div
                   key={index}
-                  className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
+                  className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center mx-1"
                   style={{
                     transform: `translateX(-${5 * index + 2}px)`,
                   }}
@@ -300,7 +300,7 @@ export const Card = ({
                 </div>
               ))}
             </div>
-            {card.title}
+            {card.subtitle}
           </motion.div>
         </div>
       </motion.button>

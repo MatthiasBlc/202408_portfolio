@@ -1,9 +1,9 @@
-import { projects, projects2 } from "@/data";
+import { projects } from "@/data";
 import React from "react";
 import { Card, Carousel } from "./ui/ProjectCarousel";
 
 const RecentProjects = () => {
-  const cards = projects2.map((card, index) => (
+  const cards = projects.map((card, index) => (
     <Card key={card.src} card={card} index={index} layout={true} />
   ));
 

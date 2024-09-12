@@ -44,111 +44,79 @@ export const gridItems = [
 
 ];
 
+
+
 export const projects = [
   {
-    id: 1,
-    title: "3D Solar System Planets to Explore",
-    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-    img: "/p1.svg",
+    category: "Web Application",
+    title: "Zorya",
+    subtitle: "A cybersecurity L.M.S.",
+    src: "/Zorya.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "https://github.com/adrianhajdin?tab=repositories",
+    content: "Ce projet est le projet le plus complet de ma vie",
+    extLink: "https://github.com/MatthiasBlc/Zorya_THP_Projet_Final",
+    extLinkText: "En savoir plus !",
+    image: "/Zorya.png",
   },
   {
-    id: 2,
-    title: "Yoom - Video Conferencing App",
-    des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-    img: "/p2.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "https://github.com/adrianhajdin/zoom-clone",
-  },
-  {
-    id: 3,
-    title: "AI Image SaaS - Canva Application",
-    des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-    img: "/p3.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "https://github.com/adrianhajdin/ai_saas_app",
-  },
-  {
-    id: 4,
-    title: "Animated Apple Iphone 3D Website",
-    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-    img: "/p4.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "https://github.com/adrianhajdin/iphone",
-  },
-];
-
-export const info = [
-  {
-    category: "Artificial Intelligence",
-    title: "You can do more with AI.",
+    category: "Web Application",
+    title: "Zorya2",
+    subtitle: "A cybersecurity L.M.S.",
     src: "/b5.svg",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    content: `We can dynamically change the HTML. We can even include HTML elements like `,
-  },];
-
-
-
-export const projects2 = [
-  {
-    category: "Artificial Intelligence",
-    title: "You can do more with AI.",
-    src: "/b5.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    content: "desc",
-    content2: "link",
-    content3: "image",
-  },
-  {
-    category: "Productivity",
-    title: "Enhance your productivity.",
-    src: "/b5.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    content: "haha",
-    content2: "bèèèèèèèèèèèèèèè",
-    content3: "image",
+    content: "Ce projet est le projet le plus complet de ma vie",
+    extLink: "https://github.com/MatthiasBlc/Zorya_THP_Projet_Final",
+    extLinkText: "En savoir plus !",
+    image: "/Zorya.png",
 
   },
   {
-    category: "Product",
-    title: "Launching the new Apple Vision Pro.",
+    category: "Web Application",
+    title: "Zorya3",
+    subtitle: "A cybersecurity L.M.S.",
     src: "/b5.svg",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    content: "haha",
-    content2: "bèèèèèèèèèèèèèèè",
-    content3: "image",
+    content: "Ce projet est le projet le plus complet de ma vie",
+    extLink: "https://github.com/MatthiasBlc/Zorya_THP_Projet_Final",
+    extLinkText: "En savoir plus !",
+    image: "/Zorya.png",
 
   },
 
   {
-    category: "Product",
-    title: "Maps for your iPhone 15 Pro Max.",
+    category: "Web Application",
+    title: "Zorya4",
+    subtitle: "A cybersecurity L.M.S.",
     src: "/b5.svg",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    content: "haha",
-    content2: "bèèèèèèèèèèèèèèè",
-    content3: "image",
+    content: "Ce projet est le projet le plus complet de ma vie",
+    extLink: "https://github.com/MatthiasBlc/Zorya_THP_Projet_Final",
+    extLinkText: "En savoir plus !",
+    image: "/Zorya.png",
 
   },
   {
-    category: "iOS",
-    title: "Photography just got better.",
+    category: "Web Application",
+    title: "Zorya5",
+    subtitle: "A cybersecurity L.M.S.",
     src: "/b5.svg",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    content: "haha",
-    content2: "bèèèèèèèèèèèèèèè",
-    content3: "image",
+    content: "Ce projet est le projet le plus complet de ma vie",
+    extLink: "https://github.com/MatthiasBlc/Zorya_THP_Projet_Final",
+    extLinkText: "En savoir plus !",
+    image: "/Zorya.png",
 
   },
   {
-    category: "Hiring",
-    title: "Hiring for a Staff Software Engineer",
+    category: "Web Application",
+    title: "Zorya6",
+    subtitle: "A cybersecurity L.M.S.",
     src: "/b5.svg",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    content: "haha",
-    content2: "bèèèèèèèèèèèèèèè",
-    content3: "image",
+    content: "Ce projet est le projet le plus complet de ma vie",
+    extLink: "https://github.com/MatthiasBlc/Zorya_THP_Projet_Final",
+    extLinkText: "En savoir plus !",
+    image: "/Zorya.png",
 
   },
 ];
