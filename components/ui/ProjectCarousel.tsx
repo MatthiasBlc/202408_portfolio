@@ -256,7 +256,7 @@ export const Card = ({
                 src={card.image}
                 alt={card.image}
                 className="py-10 md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain"
-                height={500}
+                height={100}
                 width={500}
               ></motion.img>
             </motion.div>
