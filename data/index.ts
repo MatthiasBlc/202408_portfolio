@@ -1,6 +1,6 @@
 export const navItems = [
-  { name: "About", link: "#about" },
-  { name: "Projects", link: "#projects" },
+  { name: "Présentation", link: "#about" },
+  { name: "Projets", link: "#projects" },
   { name: "Contact", link: "#contact" },
 ];
 
@@ -10,8 +10,8 @@ export const listLogos = ["/logo_js.svg", "/logo_react.svg", "/logo_nextjs.svg",
 export const gridItems = [
   {
     id: 1,
-    title: "My tech stack ",
-    description: "I constantly try to improve",
+    title: "Mes technologies ",
+    description: "Passionné et autodidacte, je me forme en permanence pour améliorer et compléter mon environnement technique.",
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
     imgClassName: "w-full h-full",
     titleClassName: "flex flex-col-reverse ",
@@ -21,7 +21,7 @@ export const gridItems = [
   },
   {
     id: 2,
-    title: "I'm very flexible with time zone communications",
+    title: "Ouvert au présentiel et au télétravail, partout en France.",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
@@ -32,7 +32,7 @@ export const gridItems = [
   },
   {
     id: 3,
-    title: "Do you want to start a project together?",
+    title: "Commençons un projet ensemble !",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",

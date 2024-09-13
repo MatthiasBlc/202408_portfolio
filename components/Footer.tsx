@@ -16,17 +16,16 @@ const Footer = () => {
       </div>
       <div className="flex flex-col items-center">
         <h1 className="heading lg:max-w-[45vw]">
-          Ready to take <span className="text-purple">your</span> digital
-          presence to the next level ?
+          Pour tous <span className="text-purple">vos besoins</span> en
+          d&eacute;veloppement web
         </h1>
         <p className="text-white-200 md:mt-10 my-5 text-center">
-          Reach out to me today and let&apos;s discuss how I can help you
-          achieve your goals.
+          Je suis &agrave; votre &eacute;coute !
         </p>
         {/* Encode with http://www.katpatuka.org/pub/doc/anti-spam.html */}
         <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#109;&#97;&#116;&#46;&#98;&#111;&#117;&#108;&#111;&#99;&#64;&#119;&#97;&#110;&#97;&#100;&#111;&#111;&#46;&#102;&#114;">
           <MagicButton
-            title="Let's get in touch"
+            title="Contactez-moi"
             icon={<FaLocationArrow />}
             position="right"
           />
@@ -34,7 +33,7 @@ const Footer = () => {
       </div>
       <div className="flex mt-16 md:flex-row flex-col justify-between items-center">
         <p className="md:text-base text-sm md:font-normal font-light">
-          Copyright © 2024 Matthias
+          Copyright © 2024 Matthias Bouloc
         </p>
         <div className="flex items-center md:gap-3 gap-6">
           {socialMedia.map((profile) => (

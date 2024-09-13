@@ -10,8 +10,8 @@ const RecentProjects = () => {
   return (
     <div className="py-20" id="projects">
       <h1 className="heading">
-        A small selection of {""}
-        <span className="text-purple">recent projects</span>
+        Mes derniers {""}
+        <span className="text-purple">projets</span>
       </h1>
       <div>
         <Carousel items={cards}></Carousel>
