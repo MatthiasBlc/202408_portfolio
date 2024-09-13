@@ -31,11 +31,11 @@ function Hero() {
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
             words="Matthias Bouloc"
           />
-          <p className="text-center md:tracking-wider md-4 text-sm md:text-lg lg:text-2xl">
+          <p className="text-center md:tracking-wider mb-1 text-sm md:text-lg lg:text-2xl">
             Bonjour ! Je suis développeur fullstack, installé à Rouen
             (Normandie).
           </p>
-          <p className="text-center md:tracking-wider md-4 text-sm md:text-lg lg:text-2xl">
+          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl ">
             Bienvenue sur mon portfolio !
           </p>
           <a href="#about">
