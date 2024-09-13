@@ -282,7 +282,7 @@ export const Card = ({
           </motion.p>
         </div>
         <div className="">
-          <BlurImage src={card.src} alt={card.title} width={500} height={500} />
+          <BlurImage src={card.src} alt={card.title} width={500} height={100} />
         </div>
 
         <div className="relative z-80 p-8">
@@ -319,6 +319,7 @@ export const BlurImage = ({
   const [isLoading, setLoading] = useState(true);
   return (
     <Image
+      unoptimized
       className={cn(
         "transition duration-300",
         isLoading ? "blur-sm" : "blur-0",
