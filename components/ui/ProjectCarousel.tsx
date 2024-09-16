@@ -32,13 +32,14 @@ type Card = {
   extLink?: string;
   extLinkText?: string;
   image?: string;
+  image2?: string;
 };
 
 export const CarouselContext = createContext<{
-  onCardClose: (index: number) => void;
+  // onCardClose: (index: number) => void;
   currentIndex: number;
 }>({
-  onCardClose: () => {},
+  // onCardClose: () => {},
   currentIndex: 0,
 });
 
@@ -94,7 +95,10 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
 
   return (
     <CarouselContext.Provider
-      value={{ onCardClose: handleCardClose, currentIndex }}
+      value={{
+        // onCardClose: handleCardClose,
+        currentIndex,
+      }}
     >
       <div className="relative w-full">
         <div
@@ -138,7 +142,8 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
             ))}
           </div>
         </div>
-        <div className="flex justify-end gap-2 mr-10">
+        {/* UnComment for scrolling */}
+        {/* <div className="flex justify-end gap-2 mr-10">
           <button
             className="relative z-40 h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center disabled:opacity-50"
             onClick={scrollLeft}
@@ -153,7 +158,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
           >
             <IconArrowNarrowRight className="h-6 w-6 text-gray-500" />
           </button>
-        </div>
+        </div> */}
       </div>
     </CarouselContext.Provider>
   );
@@ -170,7 +175,7 @@ export const Card = ({
 }) => {
   const [open, setOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
-  const { onCardClose, currentIndex } = useContext(CarouselContext);
+  // const { onCardClose, currentIndex } = useContext(CarouselContext);
 
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
@@ -198,7 +203,7 @@ export const Card = ({
 
   const handleClose = () => {
     setOpen(false);
-    onCardClose(index);
+    // onCardClose(index);
   };
 
   return (
@@ -249,16 +254,27 @@ export const Card = ({
               </motion.p>
               <motion.p className="py-10">{card.content}</motion.p>
               <motion.a href={card.extLink} target="_blank" className="py-10">
-                {card.extLinkText}
+                <span className="text-purple">{card.extLinkText}</span>
               </motion.a>
               {/* KEEP THIS ONE  md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain */}
-              <motion.img
-                src={card.image}
-                alt={card.image}
-                className="py-10 md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain"
-                height={100}
-                width={500}
-              ></motion.img>
+              <div className="flex gap-3 flex-col md:flex-row ">
+                <motion.img
+                  src={card.image}
+                  alt={card.image}
+                  className="py-10 md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain"
+                  height={100}
+                  width={500}
+                ></motion.img>
+                {card.image2 && (
+                  <motion.img
+                    src={card.image2}
+                    alt={card.image2}
+                    className="py-10 md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain"
+                    height={100}
+                    width={500}
+                  ></motion.img>
+                )}
+              </div>
             </motion.div>
           </div>
         )}
