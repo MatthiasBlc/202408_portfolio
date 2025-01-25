@@ -104,7 +104,7 @@ export const socialMedia = [
   {
     id: 1,
     img: "/mini_github.svg",
-    url: "https://www.linkedin.com/in/matthias-bouloc-345067a5/",
+    url: "https://github.com/MatthiasBlc?tab=repositories",
   },
   {
     id: 2,
